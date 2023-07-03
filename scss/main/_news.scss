@@ -1,0 +1,113 @@
+#News {
+  width: 1920px;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  background-color: #fff;
+
+  .inner {
+    width: 700px;
+    height: 100%;
+    position: relative;
+
+    .font {
+      position: absolute;
+      top: 30%;
+      right: 5%;
+      transform: translate(-50%, -50%);
+
+      strong {
+        font: bold 45px/1 "arial";
+        color: #a50034;
+      }
+
+      .btn {
+        width: 120px;
+        height: 50px;
+        cursor: pointer;
+        position: relative;
+
+        span {
+          font: 25px/40px "맑은 고딕";
+          color: #222;
+          transition: 0.5s;
+          display: inline-block;
+          margin-top: 10px;
+
+          &:hover {
+            &::before {
+              width: 100%;
+              transition: 0.2s;
+            }
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            width: 0%;
+            height: 3px;
+            background-color: #a50034;
+          }
+
+          &:hover {
+            &::after {
+              width: 40px;
+              transition: 0.2s 0.2s;
+            }
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            width: 0px;
+            height: 3px;
+            background-color: #a50034;
+            transform-origin: right center;
+            transform: rotate(45deg);
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .wrap {
+    padding-top: 70px;
+    position: relative;
+
+    article {
+      display: flex;
+      margin-right: 100px;
+
+      &:nth-child(2) {
+        margin-top: 100px;
+      }
+
+      .pic {
+        width: 105px;
+        height: 70px;
+        margin-right: 20px;
+        margin-top: 10px;
+        cursor: pointer;
+      }
+
+      .content {
+        li {
+          padding-top: 10px;
+          margin-bottom: 5px;
+
+          a {
+            font: bold 22px/1 "맑은 고딕";
+            color: #000;
+          }
+
+          span {
+            font: 16px/1 "맑은 고딕";
+          }
+        }
+      }
+    }
+  }
+}
